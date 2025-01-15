@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Navigation Styles */
+        #smart {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        #smart img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .na {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .na:hover {
+            text-decoration: underline;
+        }
+
+        /* Animated Text */
+        #outputDiv h2 {
+            font-size: 2em;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Gallery Styles */
+        .gallery {
+            margin: 20px auto;
+            max-width: 90%;
+        }
+
+        .photos img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .photos img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="smart" class="navbar navbar-expand-lg">
+        <img src="images/logo.jpg" alt="Logo" id="image">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a href="index.html" class="na nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="about.html" class="na nav-link">About</a></li>
+                    <li class="nav-item"><a href="contactsandAddress.html" class="na nav-link">Contacts & Address</a></li>
+                    <li class="nav-item"><a href="offers.html" class="na nav-link">What we offer</a></li>
+                    <li class="nav-item"><a href="fees&aftercare.html" class="na nav-link">Fees & After Care</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="na nav-link">Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Animated Text -->
+    <div id="outputDiv"></div>
+    <script>
+        let strings = ["Welcome To Our Gallery, Where We Share Our Memories"];
+        let colors = ["red", "blue", "green", "purple", "orange", "brown", "navy"];
+        let index = 0;
+        let outputDiv = document.getElementById("outputDiv");
+
+        setInterval(() => {
+            if (!outputDiv.querySelector("h2")) {
+                let h2 = document.createElement("h2");
+                outputDiv.appendChild(h2);
+            }
+
+            let h2 = outputDiv.querySelector("h2");
+            h2.textContent = strings[0];
+            h2.style.color = colors[index % colors.length];
+            index = (index + 1) % colors.length;
+        }, 1000);
+    </script>
+    
+    <!-- Gallery -->
+    <div class="gallery container">
+        <div class="row g-3">
+            <div class="col-md-4 col-sm-6"><img src="images/IMG-20241119-WA0205.jpg" alt="Activity Photo 1"></div>
+            <div class="col-md-4 col-sm-6"><img src="images/IMG-20241120-WA0027.jpg" alt="Activity Photo 2"></div>
+            <div class="col-md-4 col-sm-6"><img src="images/IMG-20241120-WA0026.jpg" alt="Activity Photo 3"></div>
+            <div class="col-md-4 col-sm-6"><img src="images/IMG-20241120-WA0029.jpg" alt="Activity Photo 4"></div>
+            <div class="col-md-4 col-sm-6"><img src="images/IMG-20241119-WA0209.jpg" alt="Activity Photo 5"></div>
+            <div class="col-md-4 col-sm-6"><img src="images/IMG-20241120-WA0019.jpg" alt="Activity Photo 6"></div>
+            <div class="col-md-4 col-sm-6"><img src="images/IMG-20241119-WA0211.jpg" alt="Activity Photo 7"></div>
+            <div class="col-md-4 col-sm-6"><img src="images/IMG-20241119-WA0212.jpg" alt="Activity Photo 8"></div>
+            <div class="col-md-4 col-sm-6"><img src="images/IMG-20241119-WA0213.jpg" alt="Activity Photo 9"></div>
+            <div class="col-md-4 col-sm-6"><img src="images/IMG-20241119-WA0210.jpg" alt="Activity Photo 10"></div>
+            <div class="col-md-4 col-sm-6"><img src="images/IMG-20241119-WA0215.jpg" alt="Activity Photo 11"></div>
+            <div class="col-md-4 col-sm-6"><img src="images/ballg2.jpg" alt="Activity Photo 20"></div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
+
+

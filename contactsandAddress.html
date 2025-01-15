@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Header Animation */
+        #outputDiv {
+            overflow: hidden;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #outputDiv h2 {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+        }
+
+        #outputDiv h2.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Contact Info Styling */
+        .calls, .address {
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        .calls p, .address p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #444;
+            margin: 10px 0;
+        }
+
+        .calls i, .address i {
+            margin-right: 8px;
+            color: #2980b9;
+        }
+
+        .calls p:hover, .address p:hover {
+            color: #555;
+        }
+
+        .calls p i {
+            font-size: 1.2em;
+        }
+
+        .address {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav id="smart">
+        <img src="images/logo.jpg" alt="Logo" id="image">
+        <a href="index.html" class="na">HOME</a>
+        <a href="about.html" class="na">About</a>
+        <a href="contactsandAddress.html" class="na">Contacts & Address</a>
+        <a href="offers.html" class="na">What we offer</a>
+        <a href="fees&aftercare.html" class="na">Fees & After Care</a>
+        <a href="gallery.html" class="na">Gallery</a>
+    </nav>
+
+    <!-- Animated Heading -->
+    <div id="outputDiv">
+        <h2></h2>
+    </div>
+
+    <!-- Contact Details -->
+    <div class="calls" id="calls">
+        <p><i class="fa-solid fa-phone"></i> Call us at: 061 670 6550 / 083 436 4769</p>
+        <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: 061 670 6550</p>
+        <p><i class="fa-solid fa-envelope"></i> smartkiddoearningcentre@gmail.com</p>
+        <p><i class="fa-brands fa-facebook"></i> Facebook: Smart Kiddo Learning Centre</p>
+        <p><i class="fa-brands fa-instagram"></i> Instagram: Smart Kiddo Learning Centre</p>
+        <p><i class="fa-brands fa-tiktok"></i> TikTok: Smart Kiddo Learning Centre</p>
+    </div>
+
+    <!-- Address Section -->
+    <div class="address" id="address">
+        <p><i class="fa-solid fa-location-dot"></i> Address:</p>
+        <p>300 Panorama Road<br>
+        The Reeds<br>
+        Centurion<br>
+        0157</p>
+    </div>
+
+    <script>
+        let strings = ["Hello", "Contact Us At", "Visit Us At", "We are innovative"];
+        let colors = ["red", "blue", "green", "purple", "orange"];
+        let index = 0;
+        let outputDiv = document.getElementById("outputDiv");
+
+        let h2 = document.createElement("h2");
+        outputDiv.appendChild(h2);
+
+        function updateSlide() {
+            h2.classList.remove('active');
+
+            setTimeout(() => {
+                h2.textContent = strings[index];
+                h2.style.color = colors[index % colors.length];
+                h2.classList.add('active');
+
+                index = (index + 1) % strings.length;
+            }, 800); 
+        }
+
+        updateSlide();
+        setInterval(updateSlide, 3500);
+    </script>
+    <script src="script.js" defer></script>
+</body>
+</html>

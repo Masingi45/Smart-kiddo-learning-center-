@@ -1,0 +1,138 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9fafc;
+}
+
+/* Header Section */
+#smart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #34495e;
+    padding: 10px 20px;
+    color: #fff;
+    flex-wrap: wrap;
+}
+
+#smart img#image {
+    height: 100px;
+    border-radius: 50%;
+}
+
+#smart h1.heading {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    color: #e74c3c;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.nav-links a.na {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a.na:hover {
+    background-color: #1abc9c;
+    border-color: #fff;
+}
+
+/* Animated Text Section */
+.animated-text-section {
+    text-align: center;
+    margin: 40px 0;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#outputDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#outputDiv h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 5px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Image Section */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 50px auto;
+    height: 300px;
+}
+
+.container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+
+.img1 {
+    top: 20%;
+    left: 30%;
+    z-index: 3;
+}
+
+.img2 {
+    top: 15%;
+    left: 45%;
+    z-index: 2;
+}
+
+.img3 {
+    top: 25%;
+    left: 60%;
+    z-index: 1;
+}
+
+.container img:hover {
+    transform: scale(1.1);
+}
+
+/* Vision & Mission Section */
+#aim {
+    background-color: #ecf0f1;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+#headingForAim h3 {
+    font-size: 1.8em;
+    color: #27ae60;
+}
+
+#headingForAim h6 {
+    font-size: 1em;
+    color: #7f8c8d;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Kiddo Learning Centre</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="bg-light shadow-sm">
+        <nav id="smart" class="navbar navbar-expand-lg navbar-light bg-light px-3">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/logo.jpg" alt="Smart Kiddo Logo" id="image" class="me-2" width="50">
+                <h1 class="heading mb-0">SMART KIDDO LEARNING CENTRE AND AFTER CARE</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <div class="nav-links navbar-nav">
+                    <a href="index.html" class="nav-link">HOME</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contactsandAddress.html" class="nav-link">Contacts & Address</a>
+                    <a href="offers.html" class="nav-link">What we offer</a>
+                    <a href="fees&aftercare.html" class="nav-link">Fees & After Care</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Image Section -->
+    <section class="sections text-center my-4">
+        <img src="images/IMG-20241120-WA0025.jpg" alt="Learning Activity 1" class="img-fluid rounded shadow-lg">
+    </section>
+
+    <!-- Animated Text Section -->
+    <section class="animated-text-section text-center my-4">
+        <div id="outputDiv"></div>
+        <script>
+            const strings = ["At Smart Kiddo", "We Laugh", "We Play", "We Learn", "We Are Smart"];
+            const colors = ["red", "blue", "green", "purple", "orange"];
+            let outputDiv = document.getElementById("outputDiv");
+            outputDiv.innerHTML = "";
+            strings.forEach((text, i) => {
+                const h2 = document.createElement("h2");
+                h2.textContent = text;
+                h2.style.color = colors[i % colors.length];
+                h2.style.opacity = "0";
+                h2.style.transition = "opacity 0.5s ease-in-out";
+                outputDiv.appendChild(h2);
+            });
+            function animateText() {
+                const h2Elements = outputDiv.querySelectorAll("h2");
+                h2Elements.forEach((h2, i) => {
+                    setTimeout(() => {
+                        h2.style.opacity = "1";
+                    }, i * 1000);
+                });
+                setTimeout(() => {
+                    h2Elements.forEach((h2) => {
+                        h2.style.opacity = "0";
+                    });
+                    setTimeout(animateText, 1000);
+                }, (strings.length + 1) * 1000);
+            }
+            animateText();
+        </script>
+    </section>
+
+    <!-- Vision and Mission Section -->
+    <section id="aim" class="container my-5">
+        <header id="headingForAim" class="text-center">
+            <h3 class="fw-bold">Our Vision And Mission</h3>
+            <h6 class="text-muted mt-3">
+                At Smart Kiddo Learning Center, our mission is to provide high-quality education that empowers our learners to thrive in both their academic journeys and the ever-evolving outside world. We are committed to equipping our students with the skills, knowledge, and confidence they need to excel in their chosen career paths and contribute meaningfully to society.
+                <br><br>
+                We aim to nurture their unique talents, help them discover their passions, and instill in them the values of perseverance, critical thinking, and lifelong learning. By fostering leadership qualities, creativity, and self-assurance, we strive to develop well-rounded individuals who are prepared to become the trailblazers of tomorrow.
+                <br><br>
+                Together, we shape a brighter future, one learner at a time.
+            </h6>
+        </header>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

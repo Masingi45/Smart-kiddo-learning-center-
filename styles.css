@@ -1,0 +1,140 @@
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9fafc;
+    color: #333;
+}
+#smart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #cce5f6;
+    padding: 15px 20px;
+    color: #333;
+    flex-wrap: wrap;
+}
+
+#smart img#image {
+    height: 100px;
+    border-radius: 50%;
+}
+
+#smart h1.heading {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0;
+    color: #3ce756; 
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    margin-left: 60px;
+}
+
+.nav-links a.na {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.644);
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a.na:hover {
+    background-color: #1abc9c;
+    border-color: #fff;
+}
+
+
+.animated-text-section {
+   
+    margin: 200px;
+}
+
+#outputDiv {
+    margin: 20px 0;
+}
+
+#outputDiv h2 {
+    font-size: 2.1em;
+    font-weight: bold;
+    transition: color 0.5s ease-in-out;
+    opacity: 0; 
+    margin: 10px 0;
+}
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.info .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.info1, .info2 {
+    font-size: 1.5rem;
+    color: #34495e;
+    font-weight: bold;
+    background-color: aqua;
+    border-radius: 4px;
+    border-style: ridge;
+}
+
+
+#aim {
+    background-color: #ecf0f1;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+#headingForAim h3 {
+    font-size: 1.8em;
+    color: #27ae60;
+}
+
+#headingForAim h6 {
+    font-size: 1em;
+    color: #7f8c8d;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+
+footer {
+    background-color: #34495e; 
+    color: #ffffff; 
+    text-align: center; 
+    padding: 15px 0; 
+    font-size: 0.9em; 
+    margin-top: 30px; 
+    border-top: 2px solid #2c3e50; 
+    position: relative; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+footer:hover {
+    background-color: #2c3e50; /* Slightly darker background on hover */
+    transition: background-color 0.3s ease-in-out;
+}
+
+footer a {
+    color: #1abc9c; /* Highlighted link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
